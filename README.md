@@ -16,13 +16,13 @@ easier & faster as possible ,the website is required to handle it.
 ## Technologies used in the project
 
 <h2>Front-end:</h2>
-- HTML, JavaScript, CSS, ASP.NET
+* HTML, JavaScript, CSS, ASP.NET
 
-<h2>Back-end:</h2>com
-- MySQL
+<h2>Back-end:</h2>
+* MySQL
 
 ## MODEL:
-** Agile model.
+* Agile model.
 
 ## Problem Limitations:
 1. The resident with no smart gadgets may not take part in the concept of COMPUTERIZED SOCIETY.
