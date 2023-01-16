@@ -10,16 +10,16 @@ difficult and tedious job to human. And at some point of time it
 leads to confusion also. So as to make the work of the society 
 easier & faster as possible ,the website is required to handle it.
 
-![](website1.png)
+![](website images/website-HomePage.png)
 ![computerized-society](https://github.com/[pradeepraj21]/[img]/blob/[main]/image.jpg?raw=true)
 
 ## Technologies used in the project
 
 <h2>Front-end:</h2>
-* HTML, JavaScript, CSS, ASP.NET
+- HTML, JavaScript, CSS, ASP.NET
 
 <h2>Back-end:</h2>
-* MySQL
+- MySQL
 
 ## MODEL:
 * Agile model.
