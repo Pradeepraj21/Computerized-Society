@@ -1,0 +1,594 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A003AD84-504B-427B-9EB5-F44E955C4027}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>computerized_society</RootNamespace>
+    <AssemblyName>computerized_society</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.11.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.11.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.aspx" />
+    <Content Include="AdminAddEmp.aspx" />
+    <Content Include="AdminCreateNotice.aspx" />
+    <Content Include="AdminDelEmp.aspx" />
+    <Content Include="adminlogin.aspx" />
+    <Content Include="AdminNotice.aspx" />
+    <Content Include="AdminViewEmp.aspx" />
+    <Content Include="admin\admin_login.aspx" />
+    <Content Include="ComplaintsAdmin.aspx" />
+    <Content Include="DashBoard.aspx" />
+    <Content Include="EditProfAdmin.aspx" />
+    <Content Include="EmpDailyWork.aspx" />
+    <Content Include="Employee.aspx" />
+    <Content Include="EmpViewComplaints.aspx" />
+    <Content Include="EmpViewEmp.aspx" />
+    <Content Include="EmpVisitorInfo.aspx" />
+    <Content Include="emp_login.aspx" />
+    <Content Include="emp_signup.aspx" />
+    <Content Include="expense.aspx" />
+    <Content Include="FlatAdmin.aspx" />
+    <Content Include="forget_pswd.aspx" />
+    <Content Include="gallery images\apartment.jpg" />
+    <Content Include="gallery images\gate.jpg" />
+    <Content Include="gallery images\lift.png" />
+    <Content Include="gallery images\mandir.jpg" />
+    <Content Include="gallery images\outdoor.jpg" />
+    <Content Include="gallery images\parking.jpg" />
+    <Content Include="gallery images\parking1.jpg" />
+    <Content Include="gallery images\shop.jpg" />
+    <Content Include="IMAGES\add emp.jpg" />
+    <Content Include="IMAGES\add empTEXT.jpg" />
+    <Content Include="IMAGES\admin_login.jpg" />
+    <Content Include="IMAGES\admin_logo.png" />
+    <Content Include="IMAGES\apartment.jpg" />
+    <Content Include="IMAGES\bathroom.jpg" />
+    <Content Include="IMAGES\bedroom.jpg" />
+    <Content Include="IMAGES\bedroom1.jpg" />
+    <Content Include="IMAGES\car-parking.jpg" />
+    <Content Include="IMAGES\DIGITAL SOCIETY.jpg" />
+    <Content Include="IMAGES\elecbill.png" />
+    <Content Include="IMAGES\employee_logo.png" />
+    <Content Include="IMAGES\emp_login1.jpg" />
+    <Content Include="IMAGES\emp_signup.png" />
+    <Content Include="IMAGES\expense.jpg" />
+    <Content Include="IMAGES\flats.jpg" />
+    <Content Include="IMAGES\footer-bg.png" />
+    <Content Include="IMAGES\hall.jpg" />
+    <Content Include="IMAGES\happy.jpg" />
+    <Content Include="IMAGES\images.jpeg" />
+    <Content Include="IMAGES\income.jpg" />
+    <Content Include="IMAGES\kitchen.jpg" />
+    <Content Include="IMAGES\login.png" />
+    <Content Include="IMAGES\login1.png" />
+    <Content Include="IMAGES\LOGO1.png" />
+    <Content Include="IMAGES\maintainbill.jpg" />
+    <Content Include="IMAGES\MAP.png" />
+    <Content Include="IMAGES\new-employee.jpg" />
+    <Content Include="IMAGES\parking.jpg" />
+    <Content Include="IMAGES\PAYMENT.png" />
+    <Content Include="IMAGES\rentbill.jpg" />
+    <Content Include="IMAGES\resident_logo.png" />
+    <Content Include="income.aspx" />
+    <Content Include="JavaScript\bar.js" />
+    <Content Include="JavaScript\lightbox-plus-jquery.min.js" />
+    <Content Include="Logout.aspx" />
+    <Content Include="MonthlyReportAdmin.aspx" />
+    <Content Include="newresident_signup.aspx" />
+    <Content Include="NoticeAdmin.aspx" />
+    <Content Include="ParkingAdmin.aspx" />
+    <Content Include="PaymentGateway.aspx" />
+    <Content Include="ResComplaint.aspx" />
+    <Content Include="Resident.aspx" />
+    <Content Include="resident_login.aspx" />
+    <Content Include="admin\resident_signup.aspx" />
+    <Content Include="ResPayment.aspx" />
+    <Content Include="ResViewEmp.aspx" />
+    <Content Include="ResViewNotice.aspx" />
+    <Content Include="Signout.aspx" />
+    <Content Include="StyleSheet\about.css" />
+    <Content Include="StyleSheet\aboutslider.css" />
+    <Content Include="StyleSheet\bar.css" />
+    <Content Include="StyleSheet\contactus.css" />
+    <Content Include="StyleSheet\footer.css" />
+    <Content Include="StyleSheet\gallery.css" />
+    <Content Include="StyleSheet\helpline.css" />
+    <Content Include="StyleSheet\lightbox.min.css" />
+    <Content Include="StyleSheet\main.css" />
+    <Content Include="StyleSheet\scroll.css" />
+    <Content Include="StyleSheet\StyleSheet1.css" />
+    <Content Include="StyleSheet\StyleSheetad.css" />
+    <Content Include="ViewEmpAdmin.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ABOUTUS.aspx" />
+    <Content Include="EXPLORE.aspx" />
+    <Content Include="GALLERY.aspx" />
+    <Content Include="CONTACTUS.aspx" />
+    <Content Include="HOME.aspx" />
+    <Content Include="LOCATION.aspx" />
+    <Content Include="LoginPage.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddEmp.aspx.cs">
+      <DependentUpon>AdminAddEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAddEmp.aspx.designer.cs">
+      <DependentUpon>AdminAddEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateNotice.aspx.cs">
+      <DependentUpon>AdminCreateNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCreateNotice.aspx.designer.cs">
+      <DependentUpon>AdminCreateNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDelEmp.aspx.cs">
+      <DependentUpon>AdminDelEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDelEmp.aspx.designer.cs">
+      <DependentUpon>AdminDelEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminlogin.aspx.cs">
+      <DependentUpon>adminlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminlogin.aspx.designer.cs">
+      <DependentUpon>adminlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminNotice.aspx.cs">
+      <DependentUpon>AdminNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminNotice.aspx.designer.cs">
+      <DependentUpon>AdminNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViewEmp.aspx.cs">
+      <DependentUpon>AdminViewEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminViewEmp.aspx.designer.cs">
+      <DependentUpon>AdminViewEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\admin_login.aspx.cs">
+      <DependentUpon>admin_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admin_login.aspx.designer.cs">
+      <DependentUpon>admin_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComplaintsAdmin.aspx.cs">
+      <DependentUpon>ComplaintsAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComplaintsAdmin.aspx.designer.cs">
+      <DependentUpon>ComplaintsAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard.aspx.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashBoard.aspx.designer.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfAdmin.aspx.cs">
+      <DependentUpon>EditProfAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProfAdmin.aspx.designer.cs">
+      <DependentUpon>EditProfAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpDailyWork.aspx.cs">
+      <DependentUpon>EmpDailyWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpDailyWork.aspx.designer.cs">
+      <DependentUpon>EmpDailyWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.aspx.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee.aspx.designer.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpViewComplaints.aspx.cs">
+      <DependentUpon>EmpViewComplaints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpViewComplaints.aspx.designer.cs">
+      <DependentUpon>EmpViewComplaints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpViewEmp.aspx.cs">
+      <DependentUpon>EmpViewEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpViewEmp.aspx.designer.cs">
+      <DependentUpon>EmpViewEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpVisitorInfo.aspx.cs">
+      <DependentUpon>EmpVisitorInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpVisitorInfo.aspx.designer.cs">
+      <DependentUpon>EmpVisitorInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="emp_login.aspx.cs">
+      <DependentUpon>emp_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="emp_login.aspx.designer.cs">
+      <DependentUpon>emp_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="emp_signup.aspx.cs">
+      <DependentUpon>emp_signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="emp_signup.aspx.designer.cs">
+      <DependentUpon>emp_signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="expense.aspx.cs">
+      <DependentUpon>expense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="expense.aspx.designer.cs">
+      <DependentUpon>expense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlatAdmin.aspx.cs">
+      <DependentUpon>FlatAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlatAdmin.aspx.designer.cs">
+      <DependentUpon>FlatAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forget_pswd.aspx.cs">
+      <DependentUpon>forget_pswd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forget_pswd.aspx.designer.cs">
+      <DependentUpon>forget_pswd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homepage.Master.cs">
+      <DependentUpon>homepage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homepage.Master.designer.cs">
+      <DependentUpon>homepage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="income.aspx.cs">
+      <DependentUpon>income.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="income.aspx.designer.cs">
+      <DependentUpon>income.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonthlyReportAdmin.aspx.cs">
+      <DependentUpon>MonthlyReportAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonthlyReportAdmin.aspx.designer.cs">
+      <DependentUpon>MonthlyReportAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newresident_signup.aspx.cs">
+      <DependentUpon>newresident_signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newresident_signup.aspx.designer.cs">
+      <DependentUpon>newresident_signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeAdmin.aspx.cs">
+      <DependentUpon>NoticeAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoticeAdmin.aspx.designer.cs">
+      <DependentUpon>NoticeAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ParkingAdmin.aspx.cs">
+      <DependentUpon>ParkingAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ParkingAdmin.aspx.designer.cs">
+      <DependentUpon>ParkingAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentGateway.aspx.cs">
+      <DependentUpon>PaymentGateway.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentGateway.aspx.designer.cs">
+      <DependentUpon>PaymentGateway.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResComplaint.aspx.cs">
+      <DependentUpon>ResComplaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResComplaint.aspx.designer.cs">
+      <DependentUpon>ResComplaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Resident.aspx.cs">
+      <DependentUpon>Resident.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resident.aspx.designer.cs">
+      <DependentUpon>Resident.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="resident_login.aspx.cs">
+      <DependentUpon>resident_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="resident_login.aspx.designer.cs">
+      <DependentUpon>resident_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\resident_signup.aspx.cs">
+      <DependentUpon>resident_signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\resident_signup.aspx.designer.cs">
+      <DependentUpon>resident_signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResPayment.aspx.cs">
+      <DependentUpon>ResPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResPayment.aspx.designer.cs">
+      <DependentUpon>ResPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResViewEmp.aspx.cs">
+      <DependentUpon>ResViewEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResViewEmp.aspx.designer.cs">
+      <DependentUpon>ResViewEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResViewNotice.aspx.cs">
+      <DependentUpon>ResViewNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResViewNotice.aspx.designer.cs">
+      <DependentUpon>ResViewNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Signout.aspx.cs">
+      <DependentUpon>Signout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Signout.aspx.designer.cs">
+      <DependentUpon>Signout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABOUTUS.aspx.cs">
+      <DependentUpon>ABOUTUS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABOUTUS.aspx.designer.cs">
+      <DependentUpon>ABOUTUS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EXPLORE.aspx.cs">
+      <DependentUpon>EXPLORE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EXPLORE.aspx.designer.cs">
+      <DependentUpon>EXPLORE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GALLERY.aspx.cs">
+      <DependentUpon>GALLERY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GALLERY.aspx.designer.cs">
+      <DependentUpon>GALLERY.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CONTACTUS.aspx.cs">
+      <DependentUpon>CONTACTUS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTACTUS.aspx.designer.cs">
+      <DependentUpon>CONTACTUS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HOME.aspx.cs">
+      <DependentUpon>HOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOME.aspx.designer.cs">
+      <DependentUpon>HOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LOCATION.aspx.cs">
+      <DependentUpon>LOCATION.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LOCATION.aspx.designer.cs">
+      <DependentUpon>LOCATION.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEmpAdmin.aspx.cs">
+      <DependentUpon>ViewEmpAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewEmpAdmin.aspx.designer.cs">
+      <DependentUpon>ViewEmpAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="homepage.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49818</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49818/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

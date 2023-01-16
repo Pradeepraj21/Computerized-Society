@@ -1,0 +1,42 @@
+﻿html {
+    scroll-behavior: smooth;
+}
+
+body {
+}
+
+.scroll {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 50px;
+    height: 80px;
+    display: block;
+    background: #000;
+    text-align: center;
+    line-height: 80px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    z-index: 10000;
+}
+
+    .scroll.top {
+        top: calc(50% - 80px);
+        background: black;
+    }
+
+    .scroll.down {
+        top: calc(50% - 0px);
+        background: grey;
+    }
+
+    .scroll.top:hover {
+        background-color: green;
+        transition: 1s;
+    }
+
+    .scroll.down:hover {
+        background-color: yellow;
+        transition: 1s;
+    }

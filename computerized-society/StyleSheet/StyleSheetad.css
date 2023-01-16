@@ -1,0 +1,41 @@
+﻿html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: forestgreen;
+    margin: 30px 0px 50px;
+}
+
+.cards {
+    margin: 10px 50px;
+    height: 590px;
+}
+
+    .cards img {
+        width: 250px;
+        padding: 10px;
+        height: 250px;
+        filter: grayscale(100%);
+        transition: 1s;
+        align-content: center;
+    }
+
+        .cards img:hover {
+            filter: grayscale(0);
+            transform: scale(1.1);
+        }
+
+.gotdownbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #27ae60;
+    top: 40px;
+    right: 50px;
+}

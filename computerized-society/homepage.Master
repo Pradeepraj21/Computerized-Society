@@ -1,0 +1,234 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="homepage.master.cs" Inherits="computerized_society.homepage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+    <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <link href="footer.css" rel="stylesheet" />
+    <link href="bar.css" rel="stylesheet" />
+    <script src="bar.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"/>
+   
+    
+    <style type="text/css">
+
+
+        .auto-style1 {
+            width: 1279px;
+            height: 122px;
+        }
+        .auto-style4 {
+            height: 68px;
+            text-align: center;
+            font-size: 45pt;
+            color: #000099;
+        }
+        .auto-style5 {
+            height: 48px;
+        } 
+        *{text-shadow:none!important;box-shadow:none!important}*{box-sizing:border-box}
+        .auto-style18 {
+            text-align: left;
+            height: 101px;
+        }
+
+         
+        </style>
+    <link href="StyleSheet/main.css" rel="stylesheet" type="text/css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div >
+            
+                <table align="center" class="auto-style1">
+                    <tr>
+                        <td class="auto-style18"><marquee>
+                        <H1 style="color:gold; text-size:xx large">WELCOME TO COMPUTERIZED SOCIETY!!!!!
+                       </H1> </marquee>
+                            
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="auto-style4" style="font-family: 'AR JULIAN'">
+
+                              &nbsp;<asp:Image ID="Image1" runat="server" Height="127px" ImageUrl="~/IMAGES/LOGO1.PNG" Width="157px" />
+
+    &nbsp;COMPUTERIZED SOCIETY
+                    <asp:ImageButton ID="ImageButton1" runat="server" Height="59px" ImageUrl="~/IMAGES/login.png" OnClick="ImageButton1_Click" Width="68px" PostBackUrl="~/adminlogin.aspx" />
+                            </h1>
+                            <p class="auto-style4" style="font-family: 'AR JULIAN'">
+
+                                &nbsp;</p>
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<nav class="auto-style5">
+                         <div class="wrapper">
+                             <div class="menu">
+                                 <div class:"mynav_navbar">
+                                <ul> <li><a href="LoginPage.aspx">LOGIN</a></li></ul>
+                               <ul><li><a href="HOME.aspx">HOME</a></li></ul>
+                               <ul><li><a href="ABOUTUS.aspx">ABOUT US</a></li></ul>  
+                                <ul><li><a href="LOCATION.aspx">LOCATION</a></li></ul>
+                                <ul><li><a href="EXPLORE.aspx">EXPLORE</a></li></ul>
+                                <ul><li><a href="GALLERY.aspx">GALLERY</a></li></ul>
+                                <ul><li><a href="CONTACTUS.aspx"> CONTACT US</a>
+                                </li></ul>
+                                 <ul><li><a href="#">LOGOUT</a></li></ul>
+
+                               <!--  <div class="mynav_dropdown">
+                                     <button class="mynav_dropbtn">LOGIN
+                                         <i class="fa fa-caret-down"></i>
+                                      </button>
+                                     <div class="mynav_dropdown-conetnt">
+                                             <ul> <li><a href="#">LOGIN</a>
+                              
+                                   
+                                  <a href="HOME.aspx">ADMIN LOGIN</a>
+                                  <a href="HOME.aspx">RESIDENT LOGIN</a>
+                                  <a href="HOME.aspx">EMPLOYEE LOGIN</a>
+                              
+                                     </div>-->
+                                 </div>
+                                     </div>
+                             
+                                
+                                <div class="content"><asp:ContentPlaceHolder ID="Contentbody" runat="server">
+                                     
+                                     <h1>hii</h1>hiii
+                                </asp:ContentPlaceHolder></div>
+                                 
+                                </div></div>
+        
+            </nav>    
+            <div id="sidebar">
+  <div class="toggle-btn" onclick="toggleSidebar(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>  
+  <div class="list">
+      <ul>
+    <li>GUEST LOGIN</li>
+    <li>RENT LIST</li>
+    <li>SELL LIST</li>
+          </ul>
+  </div>
+</div>
+
+            <!-- <div id="sidebar" class="text-right" >
+                <div class="toggle-btn" onclick="toggleSidebar()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li>Rent List</li>
+                <li>Sell List</li>
+                <li>Work Allocation</li>
+            </ul>
+            
+        </div>
+            </div>-->
+                           
+                            <div class="text-right">
+
+                            </div>
+                        </td>
+                    </tr>
+                    
+                </table>
+           
+           
+            
+               
+                    </div>
+            
+       
+          </div>
+            
+                </div>
+
+   
+   <div class="footer">
+       <div class="footer-content">
+           <div class="footer-section about">
+               <h1 class="logo-text"><span >COMPUTERIZED</span> SOCIETY</h1><br />
+                <p>                       <u>ADDRESS:</u>  Prem Apartment, 
+                                           Katemanivali Rd, 
+                                           Chichpada Road,
+                                           Near Ideal School,
+                                           Kalyan(E),Thane,
+                                           Maharashtra-421306</p>
+               <div class="contact">
+                   <span><i class="fa fa-phone"></i>&nbsp;<p><a href="tel:+012-3456-789">+012-3456-789</a></p></span>
+                   <span><i class="fa fa-envelope"></i>&nbsp; <p><a href="mailto:csproject2021@gmail.com">mailto@:csproject2021@gmail.com</a></p></span>
+               </div>
+               
+               <div class="social">
+                   
+                           <a href="#"target="_blank"><i class="fas fa-facebook"></i></a>
+                           <a href="#"target="_blank"><i class="fas fa-twitter"></i></a>
+                           <a href="#"target="_blank"><i class="fas fa-instagram"></i></a>
+                           <a href="#"target="_blank"><i class="fas fa-linkedin"></i></a>
+                           <a href="#"target="_blank"><i class="fas fa-youtube"></i></a>
+                           <a href="#"target="_blank"><i class="fas fa-pinterest"></i></a>
+                       
+
+               </div>
+
+           </div>
+          <div class="footer-section links">
+           <h2>QUICK LINKS</h2>
+              <br />
+           
+                                           <a href="adminlogin.aspx">ADMIN LOGIN</></a><br /><br />
+                                           <a href="resident_login.aspx">RESIDENT LOGIN</></a><br /><br />
+                                           <a href="emp_login.aspx">EMPLOYEE LOGIN</></a><br /><br />
+                                           <a href="HOME.aspx">HOME</></a><br /><br />
+                                           <a href="ABOUTUS.aspx">ABOUT US</></a><br /><br />
+                                           <a href="#">FEATURES</a><br /><br />
+                                           <a href="GALLERY.aspx">GALLERY</a><br /><br />
+                                           <a href="CONTACTUS.aspx">CONTACT US</></a><br /><br />
+                                           
+                                      
+                 
+              </div>
+           
+           <div class="footer-section contact-form">
+           <h2>GET IN TOUCH</h2><br />
+               <h3 style="color:darkgoldenrod">Feel free to drop us a line to Contact Us</h3>
+          
+            <div class="footer-form">
+                 <form method="post" action="#">
+                       <div class="footer-form-box">
+                        <input id="Text1" type="text"  placeholder="Name"/ > 
+                  </form>
+                        </div>
+                                   
+                        <div class="footer-form-box">
+                           <form method="post" action="#">
+                            <input id="Text2" type="text" class="footer-form-style" placeholder="Email" /> 
+                            </form>
+                         </div>
+                         <div class="footer-form-box">
+                             <form method="post" action="#">
+                                <textarea name="text" class="footer-form-style" placeholder="Your FeedBack..." ></textarea> 
+                              </form>
+                           </div>
+                           <div class="footer-form-box">
+                               <form method="post" action="CONTACTUS.aspx">
+                                  <input id="button" type="submit" class="footer-form-submit-style" value="SUBMIT" /> 
+                               </form>
+                           </div>
+           </div>
+
+       <div class="footer-bottom">
+           &copy;Copyright 2020 Computerized Society All Rights Reserved
+       </div>
+   </div>
+    </form>        
+</body>
+</html>
