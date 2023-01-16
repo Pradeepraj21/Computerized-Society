@@ -11,7 +11,13 @@ leads to confusion also. So as to make the work of the society
 easier & faster as possible ,the website is required to handle it.
 
 ![](website-images/website-HomePage.PNG)
-![computerized-society](https://github.com/[pradeepraj21]/[img]/blob/[main]/image.jpg?raw=true)
+![](website-images/website-Gallery.PNG)
+![](website-images/website-Login.PNG)
+![](website-images/website-Parking.PNG)
+![](website-images/website-Complaints.PNG)
+![](website-images/website-Notice.PNG)
+![](website-images/website-Visitors.PNG)
+![](website-images/website-Employee.PNG)
 
 ## Technologies used in the project
 
